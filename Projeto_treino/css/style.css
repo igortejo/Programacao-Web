@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Regular.otf');
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Bold.otf');
+    font-weight: bold;
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+.cabecalho {
+    background: #fff;
+    padding: 15px;
+}
+
+.logo {
+    background-image: url("../img/logotipo-preto.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 120px;
+    height: 53px;
+    text-indent: -9999px;
+    margin: 0;
+}
+
+.menu-principal_btn {
+    display: block;
+    position: absolute;
+    top:15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    background-color: #fff;
+    background-image: url("../img/menuprincipal-btn-bg.png");
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-principal_btn--fechar {
+    background-position: -48px 7px;
+}
+
+.menu-principal_lista {
+    padding: 10px;
+}
+
+.menu-principal_lista li {
+    list-style: none;
+}
+
+.menu-principal_item {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #343434;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.menu-principal_item--atual {
+    color: #f44242;
+}
+
+.rodape {
+    color: #fff;
+}
+
+.rodape_linha-1 {
+    background-color: #272525;
+    background-image: url("../img/fundo.jpg");
+    background-size: cover;
+    padding: 15px;
+}
+
+.rodape_linha-2 {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+}
+
+.rodape_titulo {
+    border-bottom: 1px solid #fff;
+    padding: 0 10px 10px 10px;
+    font-size: 18px;
+}
+
+.rodape_lista-links {
+    padding: 0;
+    list-style: none;
+}
+
+.rodape_lista-links_item {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.rodape_lista-links_item::before {
+    content: '>';
+    margin-right: 8px;
+    color: #f44242;
+}
+
+
+
+
+
+
+
+
