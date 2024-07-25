@@ -1,0 +1,53 @@
+/* Estilos para o layout de imagens das temáticas */
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não caberem na linha atual */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    flex: 1 1 200px; /* Cresce para ocupar o espaço disponível e encolhe se necessário */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 10px;
+}
+
+nav a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav img {
+    width: 100px; /* Define a largura da imagem */
+    height: 100px; /* Define a altura da imagem */
+    object-fit: contain; /* Mantém a proporção da imagem dentro do elemento */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+}
+
+nav h2 {
+    font-size: 16px; /* Define o tamanho da fonte para o título */
+    margin: 10px 0 0;
+}
+
+/* Destaque para HTML, CSS e JavaScript */
+nav li:nth-child(1) img,
+nav li:nth-child(1) h2,
+nav li:nth-child(2) img,
+nav li:nth-child(2) h2,
+nav li:nth-child(3) img,
+nav li:nth-child(3) h2 {
+    width: 150px; /* Aumenta a largura das imagens */
+    height: 150px; /* Aumenta a altura das imagens */
+    transform: scale(1.1); /* Adiciona um efeito de zoom para destaque */
+}
+
+/* Adiciona um efeito de hover para todas as imagens */
+nav li:hover img {
+    transform: scale(1.2); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
