@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 08</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function fatorialNumeros(){
+                var numeros = document.getElementById("txtNumeros").value;
+                numeros = numeros.split(",");
+
+                for (i = 0; i < numeros.length; i++) {
+                    var resultado = fatorial(parseInt(numeros[i]));
+                    document.write("O fatorial é " + resultado + "<br>");
+                    
+                }
+            }
+
+            function fatorial(n) {
+                if(n == 0) {
+                    return 1 
+                } else {
+                    return n * fatorial(n-1)
+                }
+
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        Números: <input type="text" id="txtNumeros">
+        <input type="button" value="Fatorial Números!" onclick="fatorialNumeros()">
+    </body>
+
+</html> 
