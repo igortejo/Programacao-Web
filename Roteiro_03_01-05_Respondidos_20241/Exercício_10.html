@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 10</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function inverteValores(){
+                var numeros = document.getElementById("txtNumeros").value;
+                numeros = numeros.split(",");
+
+                var numerosInvertidos = [];
+                var j = 0;
+
+                for (i = numeros.length -1 ; i >= 0; i--) {
+                    numerosInvertidos[j] = numeros[i];
+                    j++;
+                }
+            document.write("A lista invertida é " + numerosInvertidos + "<br>");
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Questão 10</h1>
+        Números: <input type="text" id="txtNumeros">
+        <input type="button" value="Inverta os valores!" onclick="inverteValores()">
+    </body>
+
+</html> 
