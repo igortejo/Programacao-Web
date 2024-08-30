@@ -23,9 +23,9 @@ function adicionarItem() {
 //Dica05: Utilize as propriedades "ul.removeChild" e "ul.lastChild" para fazer remoções de li na lista
 //Dica06: Lembre-se de só deixar remover se a lista tiver pelo menos um elemento
 function removerItem() {
-    let tamanhoLista = document.getElementById("listaItens").children.length
-    document.getElementById("listaItens").lastChild.removeChild
-    tamanhoLista--
+    if(document.getElementById("listaItens").children.length > 0) {
+        document.getElementById("listaItens").removeChild(document.getElementById("listaItens").lastChild)
+    }
 }
 
 //Etapa 3: Modificar estilos de inputs do tipo text
@@ -76,21 +76,34 @@ function mover(direcao) {
 //Dica01: Utilize a propriedade "p.classList.toggle" para fazer a alternância
 function alternarClasse() {
     const p = document.getElementById('classeParagrafo');
-    //TODO
-    p.classList.toggle('classeAzul');
+
     p.classList.toggle('classeVermelha');
+    p.classList.toggle('classeAzul');
+
+    if (p.classList.contains('classeAzul')) {
+        p.innerText = "Este parágrafo é da classe azul.";
+    } else if (p.classList.contains('classeVermelha')) {
+        p.innerText = "Este parágrafo é da classe vermelha.";
+    }
+
 }
 
 //Exercício 7: Galeria de Imagens com Zoom
 //Dica01: Utilize a função replace para substitutir o 100 por 300 no valor de src da imagem
 function mostrarImagemMaior(img) {
+
     const imagemMaior = document.getElementById('imagem-maior');
-    //TODO
+    // Substitui '100' por '300' no valor do src da imagem
+    const pathMaior = img.src.replace('100', '300');
+    
+    // Define o src da imagem maior com o novo valor
+    imagemMaior.src = pathMaior;
+    
 }
 
 // Exercício 8: Validação de Formulário
 //Obrigatório: É preciso aplicar estratégias de validação dos valores dos quatro campos do formulário.
-//Pelo menos: não aceitar nome vazio, o cpf precisa estar mascarado e com 14 dígitos, 
+//Pelo menos: não aceitar nome vazio, o cpf precisa estar mascarado e com 11 dígitos, 
 //o email precisa ter pelo menos um @ e um ponto duas posições após o @ e a senha não deve conter menos que 8 caracteres.
 function validarFormulario() {
     const nome = document.getElementById('nome').value;
@@ -99,7 +112,16 @@ function validarFormulario() {
     const senha = document.getElementById('senha').value;
     const erro = document.getElementById('mensagem-erro');
     
-    erro.textContent = '';
+    if (nome === '') {
+        alert(erro.textContent = 'Nome vazio, tente novamente')
+    }
+    if (cpf.length !== 11) {
+        alert(erro.textContent = 'Cpf não contem 11 digitos, tente novamente')
+    }
+    
+    if (senha.length < 8) {
+        alert(erro.textContent = 'Senha com menos de 8 caracteres, tente novamente')
+    }
     return true;
 }
 
@@ -110,11 +132,11 @@ function validarFormulario() {
 //do número de "incomodam" ser maior ou igual a 10.
 let contador = 0;
 function incrementar() {
-    contador++;
+    document.getElementById('contador').textContent = contador++
 }
 
 function decrementar() {
-    contador--;
+    document.getElementById('contador').textContent = contador--
 }
 
 function geraMusicaElefante(numVersos){
