@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validando</title>
+</head>
+<body>
+    <h1>Validaçaõ de entradas</h1>
+    <p>Digite um número entre 1 e 10:</p>
+    <input id="num">
+    <button type="button" onclick='valideEntrada()'>Submit</button>
+    <p id="resultado"></p>
+
+<script>
+
+    function valideEntrada() {
+        var numero = document.getElementById("num").value;
+        var text;
+        if (isNaN(numero) || numero < 1 || numero > 10) {
+            text ='Número invalido';
+        }else {
+            text ='Número valido';
+        }
+        document.getElementById('resultado').innerHTML =text;
+
+    }
+
+</script>
+
+</body>
+</html>
